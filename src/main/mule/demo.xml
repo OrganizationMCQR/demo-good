@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<flow name="demoFlow" doc:id="1e86ffb5-5316-4247-943b-17009d1f8b3e" >
+		<scheduler doc:name="Scheduler" doc:id="78b140f5-a1b6-4146-8bda-6fc58c4b221d" >
+			<scheduling-strategy >
+				<fixed-frequency timeUnit="HOURS"/>
+			</scheduling-strategy>
+		</scheduler>
+		<logger level="INFO" doc:name="Logger" doc:id="b00871f8-1721-4c71-9b00-f5d05b8b62de" />
+		<set-payload value='"Hello"' doc:name="Set Payload" doc:id="92054d23-f3a6-42cb-89cb-bc74b8737b3a" />
+	</flow>
+</mule>
